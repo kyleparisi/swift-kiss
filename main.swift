@@ -29,6 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        print("hello")
         let button = NSButton(frame: NSMakeRect(20, 20, 100, 32))
         button.title = "Click Me"
         button.target = self
@@ -37,6 +38,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(nil)
 
         populateMainMenu()
+    }
+
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+        print("goodbye")
     }
 
     @IBAction func onClick(_: Any) {

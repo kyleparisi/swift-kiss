@@ -1,10 +1,10 @@
 default: build open
 
 build:
-	swiftc -o example.app/Contents/MacOS/main main.swift
+	swiftc -o "example.app/Contents/MacOS/main" *.swift -g
 
 open:
-	open example.app
+	example.app/Contents/MacOS/main -NSDocumentRevisionsDebugMode YES
 
 clean:
 	rm example.app/Contents/MacOS/main
