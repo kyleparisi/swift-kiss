@@ -1,6 +1,22 @@
-// reference: https://github.com/lapcat/NiblessMenu
+// reference: https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
 
 import AppKit
+import SwiftUI
+
+struct ContentView: View {
+    @State var showingProfile = false
+    
+    var body: some View {
+        VStack {
+            Text("Hello World")
+            Text("State: " + (showingProfile ? "True" : "False"))
+            Button(action: { self.showingProfile.toggle() }) {
+                Text("A button")
+            }
+        }.padding(100)
+
+    }
+}
 
 // Apparently these aren't declared anywhere
 @objc protocol EditMenuActions {
@@ -11,7 +27,7 @@ import AppKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     lazy var window = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200),
-                styleMask: .titled, backing: .buffered, defer: false, screen: nil)
+                styleMask: [.titled, .closable], backing: .buffered, defer: false, screen: nil)
     lazy var applicationName:String = {
         if let bundleName = Bundle.main.object(forInfoDictionaryKey:"CFBundleName") {
             if let bundleNameAsString = bundleName as? String {
@@ -30,11 +46,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("hello")
+        
+        // the button is now disregarded for the content view
         let button = NSButton(frame: NSMakeRect(20, 20, 100, 32))
         button.title = "Click Me"
         button.target = self
         button.action = #selector(onClick)
+        
+        window.title = "Example"
         window.contentView?.addSubview(button)
+        window.contentView = NSHostingView(rootView: ContentView())
+        window.center()
+        NSApp.activate(ignoringOtherApps: true)
         window.makeKeyAndOrderFront(nil)
 
         populateMainMenu()
@@ -128,5 +151,6 @@ autoreleasepool {
 		application.delegate = delegate
 		application.run()
 		application.delegate = nil
+        application.activate(ignoringOtherApps: true)
 	})
 }
