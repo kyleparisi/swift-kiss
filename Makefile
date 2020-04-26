@@ -7,5 +7,5 @@ open:
 	example.app/Contents/MacOS/main -NSDocumentRevisionsDebugMode YES
 
 clean:
-	rm example.app/Contents/MacOS/main
+	rm -rf example.app/Contents/MacOS/main*
 
