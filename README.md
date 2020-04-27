@@ -12,6 +12,8 @@ make test
 
 [dynamic libraries](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)
 
+[build without xcode](https://vojtastavik.com/2018/10/15/building-ios-app-without-xcode/)
+
 `-F` is for the compiler to find the frameworks that are being used.
 
 `-Xlinker -rpath -Xlinker` tells the linker rpath (run path) where fameworks are being used for dynamic linking.  Linking is done via `ld`.
