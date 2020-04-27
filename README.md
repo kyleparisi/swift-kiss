@@ -15,6 +15,7 @@ make test
 `-F` is for the compiler to find the frameworks that are being used.
 
 `-Xlinker -rpath -Xlinker` tells the linker rpath (run path) where fameworks are being used for dynamic linking.  Linking is done via `ld`.
+These can also be changed via `DYLD_LIBRARY_PATH` and `DYLD_FRAMEWORK_PATH` when running the binary.
 
 The above options could be removed if we copied all the libraries to the expected location.
 
