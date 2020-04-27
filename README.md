@@ -7,7 +7,9 @@ make test
 ### Notes
 
 [rpath reference](https://blog.krzyzanowskim.com/2018/12/05/rpath-what/)
+
 [dynamic linking reference](https://medium.com/livefront/how-to-add-a-dynamic-swift-framework-to-a-command-line-tool-bab6426d6c31)
+
 [dynamic libraries](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)
 
 `-F` is for the compiler to find the frameworks that are being used.
