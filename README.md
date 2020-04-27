@@ -20,4 +20,4 @@ The above options could be removed if we copied all the libraries to the expecte
 
 If you wanted to know _everything_ that xcode does when you build/test your project, open `Show Report Navigator` above the file tree.
 
-It would be nice if the output was more human.
+~It would be nice if the output was more human.~  Installing `xcpretty` is good.

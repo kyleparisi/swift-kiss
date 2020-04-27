@@ -25,5 +25,5 @@ test_build:
 	Tests/*.swift Sources/*.swift
 	
 test_open:
-	./example.app/Contents/Plugins/exampletests.xctest/Contents/MacOS/main
+	./example.app/Contents/Plugins/exampletests.xctest/Contents/MacOS/main 2>&1 | xcpretty
 
