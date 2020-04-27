@@ -4,7 +4,7 @@
 make test
 ```
 
-### Notes
+## Notes
 
 [rpath reference](https://blog.krzyzanowskim.com/2018/12/05/rpath-what/)
 
