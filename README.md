@@ -1,26 +1,11 @@
 # swift-kiss
 
-```bash
-make test
-```
 
-## Notes
+I have switched over to a regular xcode project.  There is too much stuff that the editor does.
+This particular app is a crappy text editor.  I used all kinds of references in this experiment.
 
-[rpath reference](https://blog.krzyzanowskim.com/2018/12/05/rpath-what/)
+Essentially you have to make object files (.o) for every `.swift` file and then link them together
+using something like `ld`.  If you install dependencies, you have to the same for all their swift files.
+This is actually typical C stuff but I know none of it.
 
-[dynamic linking reference](https://medium.com/livefront/how-to-add-a-dynamic-swift-framework-to-a-command-line-tool-bab6426d6c31)
-
-[dynamic libraries](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)
-
-[build without xcode](https://vojtastavik.com/2018/10/15/building-ios-app-without-xcode/)
-
-`-F` is for the compiler to find the frameworks that are being used.
-
-`-Xlinker -rpath -Xlinker` tells the linker rpath (run path) where fameworks are being used for dynamic linking.  Linking is done via `ld`.
-These can also be changed via `DYLD_LIBRARY_PATH` and `DYLD_FRAMEWORK_PATH` when running the binary.
-
-The above options could be removed if we copied all the libraries to the expected location.
-
-If you wanted to know _everything_ that xcode does when you build/test your project, open `Show Report Navigator` above the file tree.
-
-~It would be nice if the output was more human.~  Installing `xcpretty` is good.
+[reference](https://www.raywenderlich.com/5960-text-kit-tutorial-getting-started)
