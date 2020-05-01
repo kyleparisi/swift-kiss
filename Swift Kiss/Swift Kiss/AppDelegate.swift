@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        let font = Font(path: "~/Desktop/Andale Mono.ttf", size: 19)
+        let font = Font(path: "~/Desktop/Andale Mono.ttf", size: 15)
         let theme = Theme.sundellsColors(withFont: font)
         let highlighter = SyntaxHighlighter(format: AttributedStringOutputFormat(theme: theme))
         let content = highlighter.highlight("func hello() -> String")
@@ -49,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 class MyTextView: NSTextView {
     override func didChangeText() {
-        let font = Font(path: "~/Desktop/Andale Mono.ttf", size: 19)
+        let font = Font(path: "~/Desktop/Andale Mono.ttf", size: 15)
         let theme = Theme.sundellsColors(withFont: font)
         let highlighter = SyntaxHighlighter(format: AttributedStringOutputFormat(theme: theme))
         let string = self.textStorage?.string
