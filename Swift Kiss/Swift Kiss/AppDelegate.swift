@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let content = highlighter.highlight("func hello() -> String")
         
         let textView = MyTextView(frame: NSRect(x: 100, y: 100, width: 480, height: 300))
+        textView.isAutomaticQuoteSubstitutionEnabled = false
         textView.textStorage?.append(content)
         
 
