@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C042AE452459186D00C41D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C042AE442459186D00C41D9C /* AppDelegate.swift */; };
 		C042AE472459186D00C41D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C042AE462459186D00C41D9C /* ContentView.swift */; };
 		C042AE492459186F00C41D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C042AE482459186F00C41D9C /* Assets.xcassets */; };
 		C042AE4C2459186F00C41D9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C042AE4B2459186F00C41D9C /* Preview Assets.xcassets */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		C042AE412459186D00C41D9C /* Swift Kiss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Kiss.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C042AE442459186D00C41D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C042AE462459186D00C41D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C042AE482459186F00C41D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C042AE4B2459186F00C41D9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 		C042AE432459186D00C41D9C /* Swift Kiss */ = {
 			isa = PBXGroup;
 			children = (
-				C042AE442459186D00C41D9C /* AppDelegate.swift */,
 				C042AE462459186D00C41D9C /* ContentView.swift */,
 				C042AE482459186F00C41D9C /* Assets.xcassets */,
 				C042AE4D2459186F00C41D9C /* Main.storyboard */,
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C042AE472459186D00C41D9C /* ContentView.swift in Sources */,
-				C042AE452459186D00C41D9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
